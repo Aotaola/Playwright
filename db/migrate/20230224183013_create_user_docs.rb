@@ -1,4 +1,4 @@
-class CreateUserDocs < ActiveRecord::Migration[7.0]
+class CreateUserDocs < ActiveRecord::Migration[6.1]
   def change
     create_table :user_docs do |t|
       t.integer :user_id

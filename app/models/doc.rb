@@ -4,5 +4,6 @@ class Doc < ApplicationRecord
 
     validates :text, presence: true, uniqueness: true
     validates :title, presence: true
-    validates :Author, presence: true
+    validates :author, presence: true
 end 
+

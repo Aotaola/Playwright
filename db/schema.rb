@@ -10,23 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_23_165615) do
+ActiveRecord::Schema.define(version: 2023_02_24_183013) do
+
   create_table "docs", force: :cascade do |t|
     t.string "title"
-    t.string "Author"
+    t.string "author"
     t.integer "wordcount"
     t.string "info"
-    t.string "text"
+    t.text "text"
     t.string "image_url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "user_docs", force: :cascade do |t|
     t.integer "user_id"
     t.integer "doc_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -36,8 +37,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_23_165615) do
     t.string "password_digest"
     t.string "bio"
     t.string "avatar"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end

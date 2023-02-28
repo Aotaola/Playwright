@@ -21,7 +21,7 @@ html, body, #root {
 
 .App {
   text-align: center;
-  background-color: rgb(57, 74, 74);
+  background-color: rgb(211, 221, 221);
   font-family: Georgia, 'Times New Roman', Times, serif;
   height: 100%
 }
@@ -33,7 +33,7 @@ html, body, #root {
 .button-container {
   justify-content: space-between;
   /* max-width: 600px; */
-  margin-top: 20rem;
+  margin-top: 5rem;
 }
 .nav {
   background-color: gray;
@@ -71,21 +71,19 @@ html, body, #root {
 .nav li:hover{
   background-color: lightgray}
 .book-button {
-  background-color: lightgray;
-  border: none;
-  color: white;
-  padding: 20px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 50px ;
-  border-radius: 0;
-  cursor: pointer;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-
-
+    background-color: lightgray;
+    border: none;
+    color: white;
+    padding: 169px 125px; /* decrease padding */
+    text-align: center;
+    text-decoration: none;
+    display: center;
+    font-size: 30px; /* decrease font size */
+    border-radius: 15px; /* round the edges slightly */
+    cursor: pointer;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 20px
+  }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

@@ -3,6 +3,8 @@ import Selection from "./selection";
 // import NavBar from "./navBar";
 
 const Home = () => {
+    
+    
     return ( 
         <>
         <Selection/>
