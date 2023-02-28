@@ -1,16 +1,14 @@
-# This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
-
+#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+#   Character.create(name: 'Luke', movie: movies.first)
 carlJung = User.create(name: "Carl", username: "JungMeng1", email: "jungmeng1@gmail.com", password_digest: "123456", bio:" hate writting bios :/ ", avatar: "https://associationofparanormalstudy.com/wp-content/uploads/2016/10/carl-jung-synchronicity-thinking-minds1.jpg")
 stevenKing = User.create(name: "Steven", username: "theItKing", email: "steven.k.69420@gmail.com", password_digest: "chachacha", bio:" gaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa ", avatar:"https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F8cb38402-19bd-4ca0-90e7-68b57ea9304e_1000x600.jpeg" )
 pabloNeruda = User.create(name: "Pablo", username: "unpoetallamadoNeruda", email: "pablo.neruda@pajaros.com", password_digest: "pablito", bio:" cuidado carajito ", avatar:"https://media-cldnry.s-nbcnews.com/image/upload/rockcms/2023-02/230214-pablo-neruda-mb-1359-ef2ede.jpg")
 
-dymer = Doc.create(title: "Dymer", Author: "C. S. Lewis", wordcount: 17362, info: "DYMER
+dymer = Doc.create(title: "Dymer", author: "C. S. Lewis", wordcount: 17362, info: "DYMER
 
     BY CLIVE
     HAMILTON
@@ -3344,10 +3342,8 @@ Produced by: Tim Lindell, David E. Brown, and the Online Distributed
              
              THE END
              ",
-            image_url: "https://www.gutenberg.org/cache/epub/70106/pg70106.cover.medium.jpg" )
-
+            image_url: "https://www.blackgate.com/wp-content/uploads/2015/12/CSLIIIa.jpg" )
 user_doc1 = UserDoc.create(user_id: carlJung.id, doc_id: dymer.id )
 user_doc2 = UserDoc.create(user_id: pabloNeruda.id, doc_id: dymer.id )
 user_doc1 = UserDoc.create(user_id: stevenKing.id, doc_id: dymer.id )
-
 

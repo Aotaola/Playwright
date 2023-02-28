@@ -7,6 +7,7 @@ class DocsController < ApplicationController
 
     def show
         doc = Doc.find(params[:id])
+
         render json: doc, status: :ok
     end
 

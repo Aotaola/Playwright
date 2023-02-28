@@ -6,7 +6,7 @@ const About = () => {
             <h1 className="about-title">About</h1>
         <div className="about-wrap">
             <p className="About">
-                PlayWright is a free active study tool 
+                PlayWright is a free study tool 
                 created with the purpose of helping people with 
                 'active reading' habits.  
                 Playwright's function also develops the habit of writting,
