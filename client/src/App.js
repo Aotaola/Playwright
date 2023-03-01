@@ -1,10 +1,11 @@
 import './App.css';
 import React from 'react'
-import Home from './components/home'
+import Home from './components/Home'
 import NavBar from './components/navBar';
 import About from './components/about'
 import Feature from './components/feature';
 import Profile from './components/profile';
+
 
 function App() {
   let component

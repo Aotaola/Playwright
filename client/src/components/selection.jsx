@@ -1,43 +1,37 @@
-import React, { useState, useEffect } from "react";
-import Feature from "./feature";
-
-const Selection = () => {
-    const [feature, setFeature] = useState(false);
-    const [bookCover, setBookCover] = useState("");
-
-    const handleclick = () => {
-        setFeature(true);
-    console.log(feature);}
+ import React, { useState } from "react";
+ import Feature from "./feature";
+ 
 
 
-    const renderBook = async() => {
-        let req = await fetch("/docs/1")
-        let res = await req.json()
-        console.log(res)
-        setBookCover(res)}
+const Selection = ({textCover}) => {
 
-        useEffect(()=>{
-            renderBook()
-        },[]) 
+  const {title, author, wordcount, info, text, image_url} = textCover
+  const [feature, setFeature] = useState(false)
 
-
-  
+   const handleClick = () => {
+       console.log(feature);
+        setFeature(true)}
 
     return ( 
-       
-        <div className= "button-container">
-        <div>
-        <span>
-        <button class="book-button" style={{ backgroundImage: `url(${bookCover.image_url})` }} onClick={handleclick}></button>
-        </span>
-         <span>                            </span>
-         <button class="book-button" style={{ backgroundImage: `url(${bookCover.image_url})` }} onClick={handleclick}></button>
-        <span>                              </span>
-        <button class="book-button" style={{ backgroundImage: `url(${bookCover.image_url})` }} onClick={handleclick}></button>
+<div className = "wrapper">
+        <div className="card-div">
+            <div className="image">
+                <img src={image_url} alt={title}/>
+            </div>
+            < div className="title">
+                <h2>{title}</h2>
+            </div>
+            <div className="button-container">
+                <button className="book-button" onClick = {handleClick}></button>
+            </div>
+            <div>
+                {feature ? <Feature  textCover={textCover}/> : null} 
+            </div>
         </div>
-        <br></br>
-         {feature ? <Feature docText={bookCover}/> : null} 
-        </div>
-     );
-}
+
+</div>
+    )}
+
+
+
 export default Selection;

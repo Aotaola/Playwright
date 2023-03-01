@@ -16,7 +16,7 @@ const Profile = () => {
     return ( 
          <>
          <h1>{user.username}</h1>
-         <img src={user.avatar} style={{ width: '400px', height: '300px' }} />
+         <img src={user.avatar} style={{ width: '400px', height: '300px' }} alt="User Profile"/>
          <h2>{user.name}</h2>
          <h3> {user.bio}</h3>
          <h4> list of stuff </h4>
