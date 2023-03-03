@@ -1,28 +1,27 @@
 import React from "react";
 import Selection from "./selection";
-import { useEffect, useState } from "react";
+// import NavBar from "./navBar";
+import ProfileCard from "./profilecard";
+//import { useEffect, useState } from "react";
 
-const Profile = () => {
-     const [user, setUser] = useState("");
-    const renderUser = async() => {
-        let req = await fetch("/users/1")
-        let res = await req.json()
-        console.log(res)
-        setUser(res)}
+const Profile = ({user, text}) => {
+         
 
-        useEffect(()=>{
-            renderUser()
-        },[]) 
+      
     return ( 
-         <>
-         <h1>{user.username}</h1>
-         <img src={user.avatar} style={{ width: '400px', height: '300px' }} alt="User Profile"/>
-         <h2>{user.name}</h2>
-         <h3> {user.bio}</h3>
-         <h4> list of stuff </h4>
+         <div>
+          {/* <NavBar/> */}
          <br></br>
-         <Selection/>
-        </>
+         <div className="profile-card-container">{
+        (user.map((userItem) => {
+            return (<ProfileCard key={userItem.id} userItem={userItem} />)
+        }))}
+        </div>
+         <br/>
+         <h4>library</h4>
+         <br></br>
+         <Selection text={text} style={{ display: "inline-block" }}/>
+        </div>
      );
 }
  
