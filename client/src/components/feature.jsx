@@ -1,45 +1,45 @@
-import React from "react";
-import { useEffect, useState } from "react";
-const Feature = () => {
-    const [bookCover, setBookCover] = useState("");
-    const renderBook = async() => {
-        let req = await fetch("/docs/1")
-        let res = await req.json()
-        console.log(res)
-        setBookCover(res)}
+import React, { useState } from "react";
 
-        useEffect(()=>{
-            renderBook()
-        },[]) 
-    
-    return ( 
-        <div style={{margin: '20px'}}>
+const Feature = ({textItem}) => {
+  const [text, setText] = useState(textItem.text);
+  const [input, setInput] = useState("");
+  const [inputColor, setInputColor] = useState("blue");
 
-            <label className="floating-label">{bookCover.title}</label>
-            <br/>
-          <textarea 
-            type="text" 
-            placeholder= {bookCover.text} 
-            cols="50"
+  function handleInputChange(event) {
+    const { value } = event.target;
+    const inputChars = value.split("");
+    let inputIsValid = true;
 
-            name="main feat"
-            style={{width: '50%', height: '60px', fontSize: '14px', padding: '0',
-             height: '200px',
-              border: '1px solid black', borderRadius: '5px',
-               textAlign: 'justify'}}
-          />
-          <br/>
+    for (let i = 0; i < inputChars.length; i++) {
+      if (inputChars[i] !== text[i]) {
+        inputIsValid = false;
+        break;
+      }
+    }
 
-          <label className="floating-label">{bookCover.author}</label>
-          
-          <br/>
-          
-          <label className="floating-label">{bookCover.info}</label>
+    if (inputIsValid) {
+      setInput(value);
+      setInputColor("blue");
+    } else {
+      setInputColor("red");
+    }
+  }
 
-          
-        </div>
-      );
-      
-}
- 
+  return (
+    <div>
+      <h3>test</h3>
+      <body>
+        <p >{text}</p>
+        <textarea
+          type="text"
+          value={input}
+          style={{ color: inputColor }}
+          placeholder={text}
+          onChange={handleInputChange}
+        />
+      </body>
+    </div>
+  );
+};
+
 export default Feature;

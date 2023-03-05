@@ -1,15 +1,18 @@
 class UsersController < ApplicationController
+     #skip_before_action :authorization
 
     def index
         users = User.all
-        render json: users, status: :ok
+        render json: @current_user, status: :ok
     end
     def show 
-        user = User.find(params[:id])
+        user = User.find(session[:user_id])
         render json: user, status: :ok
     end
+    
     def create 
         new_user = User.create!(user_params)
+        session[:user_id] = user.id
         render json: new_user, status: :created
     end
     def update 
@@ -20,6 +23,10 @@ class UsersController < ApplicationController
     def destroy
         user = User.find(params[:id])
         user.destroy
+    end
+
+    def me
+        render json: @current_user, status: :ok
     end
 
     private 

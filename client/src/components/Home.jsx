@@ -1,14 +1,17 @@
 import React from "react";
 import Selection from "./selection";
-// import NavBar from "./navBar";
 
-const Home = () => {
+
+
+const Home = ({text}) => {
     
-    
+        
     return ( 
-        <>
-        <Selection/>
-        </>
+        <div className = "selection-wrapper">
+        <div>   
+        <Selection  text={text}/>
+        </div>
+        </div>
      );
 }
  

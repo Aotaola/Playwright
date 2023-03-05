@@ -8,6 +8,20 @@ carlJung = User.create(name: "Carl", username: "JungMeng1", email: "jungmeng1@gm
 stevenKing = User.create(name: "Steven", username: "theItKing", email: "steven.k.69420@gmail.com", password_digest: "chachacha", bio:" gaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa ", avatar:"https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F8cb38402-19bd-4ca0-90e7-68b57ea9304e_1000x600.jpeg" )
 pabloNeruda = User.create(name: "Pablo", username: "unpoetallamadoNeruda", email: "pablo.neruda@pajaros.com", password_digest: "pablito", bio:" cuidado carajito ", avatar:"https://media-cldnry.s-nbcnews.com/image/upload/rockcms/2023-02/230214-pablo-neruda-mb-1359-ef2ede.jpg")
 
+ode = Doc.create(title: "Ode I. 11", author: "Horace", wordcount: 74, info: "Horace (Quintus Horatius Flaccus) was a Roman poet, satirist, and critic. Born in Venusia in southeast Italy in 65 BCE. Horace, Ode I. 11, translated by Burton Raffel, from The Essential Horace. Copyright © 1983 by Burton Raffel. Reprinted with the permission of North Point Press, a division of Farrar, Straus & Giroux, LLC.", text: "Leucon, no one’s allowed to know his fate,
+Not you, not me: don’t ask, don’t hunt for answers
+In tea leaves or palms. Be patient with whatever comes.
+This could be our last winter, it could be many
+More, pounding the Tuscan Sea on these rocks:
+Do what you must, be wise, cut your vines
+And forget about hope. Time goes running, even
+As we talk. Take the present, the future’s no one’s affair.", image_url: "https://media.poetryfoundation.org/uploads/media/default/0001/20/1d226c84fa025c173ad582e0aead0549c64db1d1.jpeg?w=1940&h=&fit=max&key=2&sig=66911f3eac7e7286c6ccd3fd364d225421b5ed494ce435b01c74eb969fc6d7ea&1940")
+
+dalai = Doc.create(title: "Songs of the 6th Dalia Lama. untitled", author: "Tsangyang Gyatso,The Dalai Lama VI" , wordcount: 21, info: "Tsangyang Gyatso, who was enthroned with grand ceremony as the Sixth Dalai Lama on the golden throne in the Potala palace in 1697, was a special Dalai Lama.", text: "Over the eastern hills rises
+The smiling face of the moon;
+In my mind forms
+The smiling face of my beloved", image_url: "https://www.friendsoftibet.org/main/images/events.GIF")
+
 dymer = Doc.create(title: "Dymer", author: "C. S. Lewis", wordcount: 17362, info: "DYMER
 
     BY CLIVE
