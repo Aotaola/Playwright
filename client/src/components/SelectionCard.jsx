@@ -1,11 +1,12 @@
 import Feature from "./feature";
 import { useState } from "react";
+
 const SelectionCard = ({textItem}) => {
 
     const [feature, setFeature] = useState(false)
     const handleClick = () => {
         console.log(feature);
-         setFeature(true)
+         setFeature(!feature)
      }
  
     return (
@@ -15,7 +16,7 @@ const SelectionCard = ({textItem}) => {
                      <img src={textItem.image_url} alt={textItem.title}/>
                  </div>
                  < div className="title">
-                        <h2>{textItem.title}</h2>
+                        <h3>{textItem.title}</h3>
                 </div>
                  <div className="button-container">
                         <button className="book-button" onClick = {handleClick}></button>

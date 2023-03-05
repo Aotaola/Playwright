@@ -40,7 +40,7 @@ function Header({user, setUser}){
         <div className="header-bar">
             <br/>
             <div className="image-container">
-                <h1> welcome to playwright</h1>
+                <h1> the writers playground.</h1>
                 {/* <img onClick={handleHome} src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPMAAADQCAMAAADlEKeVAAAAA1BMVEXuI1tGFj9tAAAASElEQVR4nO3BAQ0AAADCoPdPbQ43oAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+DcZAAAFpTHXUAAAAAElFTkSuQmCC" alt="logo"></img> */}
             </div>
             <br/>

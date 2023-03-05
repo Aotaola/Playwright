@@ -8,17 +8,19 @@ import About from './components/about'
 import Header from './components/Header'
 import Feature from './components/feature';
 import Profile from './components/profile';
+import Create from './components/create';
 import { createBrowserRouter, RouterProvider, } from "react-router-dom";
 import { useState, useEffect } from 'react';
 
 
 function App() {
   const [user, setUser] = useState(null)
+
   useEffect(() => {
     fetch('/profile')
       .then((res) => {
         if (res.ok) {
-          res.json().then((session) => console.log(session))
+          res.json().then((session) => setUser(session))
         } 
         else {
           setUser(null);
@@ -26,14 +28,15 @@ function App() {
       });
   }, []);
 
-  console.log(user)
+  //console.log(user)
 
   const [text, setText] = useState([]);
 
     const renderText = async() => {
         let req = await fetch(`/docs/`)
         let res = await req.json()
-        console.log(res)
+
+       // console.log(res)
         setText(res)} 
 
         useEffect(()=>{
@@ -102,13 +105,21 @@ function App() {
           <Feature text={text}/>
         </div>
       </div>
+  },
+  {
+    path: "/create",
+    element: 
+      <div>
+        <Header user={user} setUser={setUser}/>
+        <Create setUser={setUser} text={text}/>
+      </div>
   }
 ]);
  
   return (
     <div className="App">
       {/* <Home/> */}
-     <NavBar/>
+     <NavBar router={router}/>
       <RouterProvider router={router} />
     </div>
   );

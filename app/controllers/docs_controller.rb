@@ -7,7 +7,6 @@ class DocsController < ApplicationController
 
     def show
         doc = Doc.find(params[:id])
-
         render json: doc, status: :ok
     end
 
@@ -15,12 +14,13 @@ class DocsController < ApplicationController
         new_doc = Doc.create!(doc_params)
         render json: new_doc, status: :created
     end
+
     def destroy
         user = User.find(params[:user_id])
         user.destroy
     end
     private
     def doc_params
-        params.permit(:title, :Author, :wordcount, :info, :text, :image_url)
+        params.permit(:title, :author, :wordcount, :info, :text, :image_url)
     end
 end

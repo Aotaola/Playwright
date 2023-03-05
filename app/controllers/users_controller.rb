@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+     #skip_before_action :authorization
 
     def index
         users = User.all
@@ -8,6 +9,7 @@ class UsersController < ApplicationController
         user = User.find(session[:user_id])
         render json: user, status: :ok
     end
+    
     def create 
         new_user = User.create!(user_params)
         session[:user_id] = user.id
