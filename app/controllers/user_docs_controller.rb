@@ -11,7 +11,9 @@ class UserDocsController < ApplicationController
     end
 
     def create
-        newUserDoc = UserDoc.create!(userDoc_params)
+        #user = User.find(params[:session[:user_id]])
+        #doc = Doc.find(params[:session[:doc_id]])
+        newUserDoc = UserDoc.create!(user: @current_user, doc_id: params[:doc_id])
         render json: newUserDoc, status: :created
     end
 

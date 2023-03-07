@@ -1,20 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const ProfileCard = ({user}) => {
+    
+    //console.log(user)
 
-    const [saved, setSaved] = useState("");
-
-const fetchUserDocs = async () => {
-     const req = await fetch(`/user_docs/`);
-     const res = await req.json();
-     console.log(res)
-     setSaved(res)}
-
-useEffect(() => {
-     fetchUserDocs();
-},[])
-const profile = user.id
-      console.log(saved.profile)
 
     return ( 
         <div className = "profile-card-div">

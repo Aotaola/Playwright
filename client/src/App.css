@@ -6,6 +6,20 @@ html, body, #root {
 .selection {
   display: flex;
 }
+.save-button {
+  width: 120px;
+  height: 40px;
+  background-color: rgb(157, 157, 230);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+.save-button:hover {
+  background-color: blue;
+}
 
 .selection {
   flex: 1;
@@ -80,18 +94,6 @@ html, body, #root {
 .book-button:hover {
   background-color: blue;
 }
-
-/* @media screen and (max-width: 768px) {
-  .card-div {
-    width: 48%;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .card-div {
-    width: 100%;
-  }
-} */
 .selection-wrapper {
   display: center;
   justify-content: space-between;

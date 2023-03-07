@@ -4,10 +4,14 @@
 const Selection = ({text}) => {
 
     return (
-        <div className="selection-card-container">{
-        (text.map((textItem) => {
-            return (<SelectionCard textItem={textItem}  />)
-        }))}
+        <div className="selection-card-container">
+            {text.map((textItem) => {
+            return (
+            <div> 
+            <SelectionCard textItem={textItem}/>
+                </div>
+            )
+        })}
         </div>
 
     )}
