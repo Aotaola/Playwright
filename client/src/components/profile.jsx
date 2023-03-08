@@ -6,13 +6,13 @@ import { useEffect, useState } from "react";
 
 const Profile = ({user}) => {
      
-const [userDocument, setUserDocument] = useState("");
+const [userDocuments, setUserDocuments] = useState([]);
 
 useEffect((id) => {
      const fetchUserWithDocs = async () => {
           const req = await fetch(`/users/${id}`)
           const res = await req.json()
-          setUserDocument(res)
+          setUserDocuments(res.docs)
           //console.log(res)
 
      }
@@ -32,7 +32,7 @@ return (
           )}
      </div>
      <br></br>
-     <Library  key={userDocument.id} userDocument={userDocument}/>
+     <Library  key={userDocuments.id} userDocuments={userDocuments}/>
      </div>
      );
 }

@@ -1,12 +1,14 @@
 import Feature from "./feature";
-import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import DeleteBtn from "./deleteBtn";
+
 
 const SelectionCard = ({textItem}) => {
 
-    const navigate = useNavigate();
+   
     const [feature, setFeature] = useState(false)
-    //console.log(textItem)
+    const [saved, setSaved] = useState([])
+    
 
     const saveDoc = async () => {
         const response = await fetch("/user_docs",{
@@ -21,35 +23,17 @@ const SelectionCard = ({textItem}) => {
     })
     if (response.ok) {
         response.json().then(data => {
-            console.log(data)
+            setSaved(data.id)
+            console.log(data.id)
         })
       } else {
         response.json().then(data => {
             console.log(data.error)
         })
     }}
+    
 
-    const deleteDoc = async () => {
-        try {
-          const response = await fetch("/user_docs/", {
-            method: 'DELETE',
-            headers: {
-              'Content-Type': 'application/json'
-            }
-          });
-      
-          if (response.ok) {
-            const data = await response.json();
-            console.log(data);
-          } else {
-            const errorData = await response.json();
-            console.log(errorData.error);
-          }
-        } catch (error) {
-          console.error(error);
-        }
-      };
-      
+  console.log(saved)
       
 
 // const handleSave = () => {
@@ -72,7 +56,7 @@ const SelectionCard = ({textItem}) => {
                         <h3>{textItem.title}</h3>
                 </div>
                         <button className="save-button"  onClick={() => saveDoc()}>SAVE</button>
-                        <button className="save-button" onClick={() => deleteDoc()}>Delete</button>
+                        <DeleteBtn saved={saved}/>
                  <div className="button-container">
                         <button className="book-button" onClick = {handleClick}></button>
                     </div>

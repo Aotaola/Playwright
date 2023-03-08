@@ -1,8 +1,14 @@
 import React from "react";
 import LibraryCard from "./LibraryCard";
 
-const Library = ({userDocument}) => {
-console.log(userDocument)
+const Library = ({userDocuments}) => {
+    console.log(userDocuments)
+
+    const cards = userDocuments.map((userDoc) => {
+            return <LibraryCard key={userDoc.id} userDoc={userDoc}/> 
+        }
+    ) 
+
     return ( 
         <div>
             <h1>
@@ -10,14 +16,8 @@ console.log(userDocument)
             here I want to see my documents
             
             </h1>
-            <div>
-            {userDocument.docs.map((userDoc) => {
-            return (
             <div> 
-            <LibraryCard key={userDoc.id} userDoc={userDoc}/>
-            </div>
-                    )
-            })} 
+                {cards}
          </div>
 
         </div>

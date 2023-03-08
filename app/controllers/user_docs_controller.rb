@@ -16,6 +16,10 @@ class UserDocsController < ApplicationController
         newUserDoc = UserDoc.create!(user: @current_user, doc_id: params[:doc_id])
         render json: newUserDoc, status: :created
     end
+    def destroy
+        userDoc = UserDoc.find(params[:id])
+        userDoc.destroy
+    end
 
     private
 
