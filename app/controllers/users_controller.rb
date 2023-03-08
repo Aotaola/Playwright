@@ -3,11 +3,12 @@ class UsersController < ApplicationController
 
     def index
         users = User.all
-        render json: @current_user, status: :ok
+        render json: @current_user, serializer: UsersWithDocsSerializer,
+        status: :ok
     end
     def show 
         user = User.find(session[:user_id])
-        render json: user, status: :ok
+        render json: user, serializer: UsersWithDocsSerializer
     end
     
     def create 

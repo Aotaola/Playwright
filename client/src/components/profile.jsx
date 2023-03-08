@@ -1,29 +1,39 @@
 import React from "react";
-import Selection from "./selection";
-// import NavBar from "./navBar";
- import ProfileCard from "./profilecard";
+//import Selection from "./selection";
+import ProfileCard from "./profilecard";
+import Library from "./Library";
 import { useEffect, useState } from "react";
 
-const Profile = ({user, text}) => {
+const Profile = ({user}) => {
      
+const [userDocuments, setUserDocuments] = useState([]);
 
+useEffect((id) => {
+     const fetchUserWithDocs = async () => {
+          const req = await fetch(`/users/${id}`)
+          const res = await req.json()
+          setUserDocuments(res.docs)
+          //console.log(res)
 
-    return ( 
-         <div>
-         <br></br>
-         <div>
-          {user ?(
-               <ProfileCard key = {user.id} user={user}/>
+     }
+     fetchUserWithDocs()
+},[])
+     
+     
+     
+return ( 
+     <div>
+     <br></br>
+     <div>
+     {user ?(
+          <ProfileCard key = {user.id} user={user}/>
           ):(
-               null
+          null
           )}
-        </div>
-         <br/>
-         <h4>library</h4>
-         <br></br>
-         {/* <div>{saved}</div> */}
-         <Selection text={text} style={{ display: "inline-block" }}/>
-        </div>
+     </div>
+     <br></br>
+     <Library  key={userDocuments.id} userDocuments={userDocuments}/>
+     </div>
      );
 }
  
