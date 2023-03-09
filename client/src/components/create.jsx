@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 
-
 const Create = () => {
 
     //const [postDoc, setPostDoc] = useState("")
@@ -35,11 +34,13 @@ const Create = () => {
           } else {
             response.json().then(data => {
                 console.log(data.error)
+               
             })
+            console.log(text.length)
     }}
        
 return (
-        <div>
+        <div className="card-container">
             <textarea type = "text" placeholder = "Type away..." value = {text} onChange = {(e) => setText(e.target.value)} ></textarea>
             <br/>
             <input type = "text" placeholder = "Title *" value = {title} onChange = {(e) => setTitle(e.target.value)}></input>
@@ -47,7 +48,7 @@ return (
             <br/>
             <input type = "text" placeholder = "Info" value = {info} onChange = {(e) => setInfo(e.target.value)}></input>
             <input type = "text" placeholder = "Image URL" value = {image_url} onChange = {(e) => setImage_url(e.target.value)}></input>
-            <input type = "text" placeholder = "Image URL" value = {wordcount} onChange = {(e) => setWordcount(e.target.value)}></input>
+            <p type = "text" placeholder = "Image URL" value = {wordcount} onChange = {(e) => setWordcount(e.target.value)}>{text.length}</p>
 
             <br/>
 

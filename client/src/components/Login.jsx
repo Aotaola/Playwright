@@ -44,7 +44,8 @@ const Login = ({setUser}) => {
 
 
     return ( 
-        <div className="sidebarcontainer">
+        <div className="card-container">
+            <h2>Login.</h2>
             <br/>            
             <div className="logincontainerall">
                 <form onSubmit={handleLogin}>
@@ -61,10 +62,12 @@ const Login = ({setUser}) => {
                     </label>
                 <br/>
                     <button className="loginButton" type="submit">Login</button>
+                    
                 </form>
                 <br/>
             </div>
             <li><a href = "/Signup">Sign Up!</a></li>
+            <br></br>
         </div>
     )
 }

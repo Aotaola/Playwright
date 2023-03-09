@@ -24,7 +24,7 @@ useEffect((id) => {
 return ( 
      <div>
      <br></br>
-     <div>
+     <div >
      {user ?(
           <ProfileCard key = {user.id} user={user}/>
           ):(
@@ -32,7 +32,7 @@ return (
           )}
      </div>
      <br></br>
-     <Library  key={userDocuments.id} userDocuments={userDocuments}/>
+     <Library  key={userDocuments?.id} userDocuments={userDocuments}/>
      </div>
      );
 }

@@ -1,4 +1,5 @@
 html, body, #root {
+  background-color: rgb(40, 38, 38);
   margin: 0;
   padding: 0;
   height: 100%;
@@ -7,18 +8,37 @@ html, body, #root {
   display: flex;
 }
 .save-button {
-  width: 120px;
-  height: 40px;
-  background-color: rgb(157, 157, 230);
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
+  text-align: left ;
+  width: 50px;
+  height: 30px;
+  background-color: rgb(232, 238, 233);
+  border-color: rgb(249, 249, 251);
+  border:#fbcd61;
+  border-radius: 3px;
+  font-size: 12px;
+  color: rgb(93, 0, 255);
+  font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
 }
 .save-button:hover {
-  background-color: blue;
+  background-color: rgb(247, 235, 131);
+  color: rgb(115, 6, 199);
+}
+.delete-button{
+  text-align: left ;
+  width: 50px;
+  height: 30px;
+  background-color: rgb(232, 238, 233);
+  border-color: rgb(249, 249, 251);
+  border:#fbcd61;
+  border-radius: 3px;
+  font-size: 12px;
+  color: rgb(93, 0, 255);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in-out;
+
 }
 
 .selection {
@@ -27,7 +47,7 @@ html, body, #root {
 }
 
 .About {
-  font-size: 20px;
+  font-size: 16px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   display: flex;
   color: black;
@@ -40,13 +60,18 @@ html, body, #root {
   text-align: center;
 
 }
+.about-title {
+  font-size: 25px;
+  font-weight: 400;
+ 
+}
 
 
 .App {
   text-align: center;
-  background-color: rgb(197, 203, 203);
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  height: 100%
+  background-color: rgb(48, 48, 49);
+  font-family: Georgia, 'Times New Roman', Times;
+  height: flex
 }
 
 .App-logo {
@@ -59,8 +84,8 @@ html, body, #root {
   margin-bottom: 10px;
 }
 .nav {
-  background-color: gray;
-  color: black;
+  background-color: rgb(67, 17, 143);
+  color: rgb(220, 175, 77);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -70,18 +95,20 @@ html, body, #root {
 .site-title { 
   font-size: 40PX;
   font-family: Georgia, 'Times New Roman', Times, serif;
+  
 }
+
 .nav ul {
   padding: 0;
   margin: 0;
-  list-style:none;
+  list-style: square;
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
 }
 .nav a {
 
   color: inherit;
-  text-decoration: none;
+  text-decoration: italic;
   height: 100%;
   display:flex;
   align-items: center;
@@ -89,24 +116,113 @@ html, body, #root {
 
 }
 .nav li.active{
-  background-color: white
+  background-color: rgb(49, 43, 81)
 }
 .book-button:hover {
-  background-color: blue;
+  background-color: rgb(108, 57, 250);
 }
 .selection-wrapper {
   display: center;
   justify-content: space-between;
 
 }
-.wrapper {
+.selection-card-container{
+  padding: 5%;
+  display: grid;
+  grid-template: auto / 1fr 1fr 1fr 1fr;
+  grid-gap: 50px;
+}
+.uppercase {
+  text-transform: uppercase;
+  color:#a7a6aa
+}
+.card-container {
+   padding: 5%;
   display: inline-block;
-  flex-wrap: wrap;
+  grid-gap: 5px;
+  background-color: #b5b5ba;
+
+}
+.profile-card {
+display: flex;
+padding: 5%;
+background-color: #474751;
+}
+
+/* .selection-card {
+  padding: 5%;
+  display: grid;
+  grid-template: auto / 1fr 1fr 1fr 1fr;
+  grid-gap: 50px;
+} */
+.feature-body {
+  display: block;
+    width: 500px;
+    height: flex;
+    background-color: #6a6868; /* light grey background */
+    border: .2rem;/* grey border */
+    border-style:double;
+    padding: 40px; /* add some padding to the container */ 
+}
+.textarea {
+  display: flex;
+  width: 100%;
+  background-color: rgb(49, 48, 48);
+  text-align: center;
+}
+
+.feature-h4 {
+  font-size: 1rem;
+  color: #c1c1c1;
+  font: Times New Roman;
+  font-style: italic;
+  font-weight: bold;
+  padding: .5rem;
+  
+}
+.feature-info {
+  background-color: rgb(44, 2, 66);
+  font-size: 1rem;
+  color: #c1c1c1;
+  font: Times New Roman;
+  font-style: italic;
+  font-weight: bold;
+  margin: .5rem;
+  padding: .5rem;
+
+}
+.profile-bio {
+  background-color: rgb(182, 179, 184);
+  font-size: 1rem;
+  color: #0d0d0d;
+  font: Times New Roman;
+  font-style: italic;
+  font-weight: bold;
+  margin: .5rem;
+  padding: .5rem;
+
+}
+
+
+.card {
+  /* add styles for your card divs here */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: center;
 }
 
 .card-div {
   width: 30%;
   margin-bottom: 20px;
+
 }
 .image {
   width: 100%;
@@ -120,15 +236,16 @@ html, body, #root {
 }
 
 .nav li:hover{
-  background-color: lightgray}
+  background-color: rgb(220, 175, 77);
+  color:rgb(232, 238, 233)}
 .title {
     margin-top: 10px;
     margin-bottom: 5px;
   }
 .book-button {
     width: 120px;
-    height: 40px;
-    background-color: rgb(157, 157, 230);
+    height: 30px;
+    background-color: rgb(102, 102, 213);
     color: white;
     border: none;
     border-radius: 5px;
@@ -136,17 +253,37 @@ html, body, #root {
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
   }
-/*   
+.about-contsainer{
+  padding: 10%;
+  display: center;
+  grid-gap: 5px;
+  color: #0303f5;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-} */
+}
+.about-title{
+  font-size: 2rem;
+  color: #c1c1c1;
+  font: Georgia;
+  text-decoration: italic;
+  font-weight:120;
+  padding: .5rem;
+
+}
+.About{
+  display: block;
+  font-size: 1.5rem;
+  color: #c1c1c1;
+  font: Times New Roman;
+  font-style: italic;
+  font-weight: 150;
+  margin: 05%;
+  padding: 02%;
+}
+
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -156,7 +293,7 @@ html, body, #root {
 }
 
 .App-link {
-  color: #61dafb;
+  color: #f7b740;
 }
 
 

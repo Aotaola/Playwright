@@ -40,22 +40,24 @@ function Header({user, setUser}){
         <div className="header-bar">
             <br/>
             <div className="image-container">
-                <h1> the writers playground.</h1>
+                <h1 className="uppercase"> Writers playground</h1>
                 {/* <img onClick={handleHome} src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPMAAADQCAMAAADlEKeVAAAAA1BMVEXuI1tGFj9tAAAASElEQVR4nO3BAQ0AAADCoPdPbQ43oAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+DcZAAAFpTHXUAAAAAElFTkSuQmCC" alt="logo"></img> */}
             </div>
             <br/>
-            
+            <div>
+
                 {user ? (
                     <div className="button-container">
-                        <button onClick={handleHome} className="header-button">Home</button>
-                        <button onClick={handleAbout} className="header-button">About</button>
-                        <button onClick={handleprofile} className="header-button">Profile</button>
-                        <button onClick={handlecreate} className="header-button">Create</button>
+                        {/* <button onClick={handleHome} className="header-button">Home</button> */}
+                        {/* <button onClick={handleAbout} className="header-button">About</button> */}
+                        {/* <button onClick={handleprofile} className="header-button">Profile</button> */}
+                        {/* <button onClick={handlecreate} className="header-button">Create</button> */}
                         <button onClick={handleDelete} className="header-button"> Log Out </button>
                     </div>
                 ):(
                     <button onClick={handleLogin} className="header-button"> Log in </button>
-                )}
+                    )}
+                    </div>
             
         </div>
     )

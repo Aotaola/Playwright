@@ -118,9 +118,9 @@ function App() {
  
   return (
     <div className="App">
-      {/* <Home/> */}
      <NavBar router={router}/>
-      <RouterProvider router={router} />
+    <RouterProvider router={router} />
+    <br></br>
     </div>
   );
 }
