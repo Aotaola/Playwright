@@ -134,18 +134,19 @@ html, body, #root {
 }
 .uppercase {
   text-transform: uppercase;
-  color:#a7a6aa
+  color:#a7a6aa;
+  padding: 2rem
 }
 .card-container {
-   padding: 5%;
+  padding: 5%;
   display: inline-block;
-  grid-gap: 5px;
+  grid-gap: 100px;
   background-color: #b5b5ba;
 
 }
 .profile-card {
 display: flex;
-padding: 5%;
+padding: 1%;
 background-color: #474751;
 }
 
@@ -193,13 +194,24 @@ background-color: #474751;
 }
 .profile-bio {
   background-color: rgb(182, 179, 184);
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #0d0d0d;
   font: Times New Roman;
   font-style: italic;
   font-weight: bold;
-  margin: .5rem;
-  padding: .5rem;
+  margin: 0rem;
+  padding: 1rem;
+
+}
+.profile-name {
+  background-color: rgb(182, 179, 184);
+  font-size: 10rem;
+  color: #0d0d0d;
+  font: Times New Roman;
+  font-style: italic;
+  font-weight: bold;
+  margin: 0rem;
+  padding: 0rem;
 
 }
 

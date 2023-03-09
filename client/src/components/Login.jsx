@@ -47,7 +47,7 @@ const Login = ({setUser}) => {
         <div className="card-container">
             <h2>Login.</h2>
             <br/>            
-            <div className="logincontainerall">
+            <div className="card">
                 <form onSubmit={handleLogin}>
                     <label className="loginLabel">
                         Username:
