@@ -1,42 +1,50 @@
-import React from 'react';
-import DeleteBtn from './deleteBtn';
+import React, { useState }from 'react';
+import Feature from './feature';
+
 
 
 const LibraryCard = ({userDoc}) => {
 
 
-    // const deleteDoc = async (id) => {
-    //       const response = await fetch(`/user_docs/${id}`, {
-    //                     method: 'DELETE',
-    //         headers: {
-    //           'Content-Type': 'application/json'
-    //         }
-    //      })};
+    const [feature, setFeature] = useState(false)
+    console.log(userDoc.id)
+    // const userDocs = userDoc
+
+    const handleClick = () => {
+        console.log(feature);
+         setFeature(!feature)
+    }
+
+
+    const deleteDoc = async () => {
+          const response = await fetch(`/user_docs/${userDoc.id}`, {
+                        method: 'DELETE',})
+        console.log(response)};
       
-    //       if (response.ok) {
-    //         const data = await response.json();
-    //         console.log(data);
-    //       } else {
-    //         const errorData = await response.json();
-    //         console.log(errorData.error);
-    //       }
-    //     } catch (error) {
-    //       console.error(error);
-    //     }
-    //   };
+      
+    
 
     return ( 
-        <div className = "wrapper">
-        <div className="card-div">
-            <div className="image">
-            <img src={userDoc.image_url} alt={userDoc.title}/>
+        
+        <div className="card-container">
+             <div className="card" >
+                    <div className="card-image"> 
+                         <img src={userDoc.image_url} alt={userDoc.title}/>
+                     </div>
+                    < div className="card-title">
+                         <h3>{userDoc.title}</h3>
+                     </div>
+                    <button className="delete-button" onClick={deleteDoc} >Delete</button>
+                         <br></br>
+                     <div>
+                <button className="book-button" onClick = {handleClick}></button>
+            <div>{feature ? <Feature  textItem={userDoc}/> : null} </div>
+                </div>
             </div>
-            < div className="title">
-            <h3>{userDoc.title}</h3>
-           </div>
-           <DeleteBtn/>
-        </div>
-   </div>
+            <br></br>
+        
+         </div>
+    
      );
 }
  

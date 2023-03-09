@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 
 const Feature = ({textItem}) => {
+  console.log(textItem);
   const [text, setText] = useState(textItem.text);
   const [input, setInput] = useState("");
-  const [inputColor, setInputColor] = useState("blue");
+  const [inputColor, setInputColor] = useState("black");
+  
+  
 
   function handleInputChange(event) {
     const { value } = event.target;
@@ -19,25 +22,29 @@ const Feature = ({textItem}) => {
 
     if (inputIsValid) {
       setInput(value);
-      setInputColor("blue");
+      setInputColor("white");
     } else {
-      setInputColor("red");
+      setInputColor("purple");
     }
   }
-
   return (
     <div>
-      <h3>test</h3>
-      <body>
-        <p >{text}</p>
-        <textarea
+      <h3></h3>
+      <body className="feature-body" 
+      onChange={handleInputChange} >
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <h4 style={{ width: "50%"}} className="feature-h4">{text}</h4>
+        <br></br>
+        <textarea className="textarea"
           type="text"
           value={input}
-          style={{ color: inputColor }}
+          style={{ borderColor: inputColor, color: inputColor, width: "50%" }}
           placeholder={text}
           onChange={handleInputChange}
-        />
-      </body>
+          rows="10"/>
+          </div>
+      </body >
+      <p className="feature-info">{textItem.author}</p><p className="feature-info">{textItem.info}</p>
     </div>
   );
 };

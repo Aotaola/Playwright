@@ -17,8 +17,15 @@ class UserDocsController < ApplicationController
         render json: newUserDoc, status: :created
     end
     def destroy
-        userDoc = UserDoc.find(params[:id])
+        userDoc = UserDoc.find_by(doc_id: params[:id], user_id: @current_user.id)
+
         userDoc.destroy
+        
+        # userDoc.map do |doc|
+        #     doc.destroy
+        # end
+
+        head :no_content
     end
 
     private

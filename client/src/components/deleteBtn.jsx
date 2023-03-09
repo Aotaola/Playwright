@@ -5,7 +5,7 @@ const DeleteBtn = ({saved}) => {
 
     console.log(saved)
 
-    //const [id, doc_id, user_id] = saved;
+    
     
     const deleteDoc = async (id) => {
         const response = await fetch(`/user_docs/${id}`, {
@@ -16,7 +16,7 @@ const DeleteBtn = ({saved}) => {
        })};
     
     return (  
-        <div>     
+        <div className="button-container">     
              <button className="save-button" onClick={deleteDoc()}>Delete</button>
         </div>
     );

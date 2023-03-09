@@ -5,13 +5,13 @@ const Selection = ({text}) => {
 
     return (
         <div className="selection-card-container">
+            
             {text.map((textItem) => {
-            return (
-            <div> 
-            <SelectionCard textItem={textItem}/>
-                </div>
+                return (
+                <SelectionCard textItem={textItem}/>
             )
         })}
+        
         </div>
 
     )}
