@@ -3,7 +3,9 @@ import React from "react";
 const NavBar = () => {
     return (
         <div>
+            
          <nav className="nav">
+            
                 {/* <RouterProvider router={router} /> */}
             <a href="/" className = "site-title">NightLight</a>
             <ul>
