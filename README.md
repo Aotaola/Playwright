@@ -1,25 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
+Nightlight (originally named playwright) is an active reading tool created with the purpose to help people with; fast typing skills, increase attention span, familiarity with classic literature and poetry.
+this project was compleated using React.js, Ruby on Rails, and SQL using authentication and session features within a 3 week timeframe
 * ...
-# Playwright
+
