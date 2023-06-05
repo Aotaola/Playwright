@@ -19,6 +19,7 @@ const LibraryCard = ({userDoc}) => {
     const deleteDoc = async () => {
           const response = await fetch(`/user_docs/${userDoc.id}`, {
                         method: 'DELETE',})
+            .then(window.location.reload())
         console.log(response)};
       
       
@@ -41,9 +42,8 @@ const LibraryCard = ({userDoc}) => {
             <div>{feature ? <Feature  textItem={userDoc}/> : null} </div>
                 </div>
             </div>
-            <br></br>
-        
          </div>
+        </div>
     
      );
 }

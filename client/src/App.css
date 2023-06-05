@@ -287,13 +287,24 @@ button .book-button:active {
 }
 .profile-bio {
   background-color: rgb(182, 179, 184);
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #0d0d0d;
   font: Times New Roman;
   font-style: italic;
   font-weight: bold;
-  margin: .5rem;
-  padding: .5rem;
+  margin: 0rem;
+  padding: 1rem;
+
+}
+.profile-name {
+  background-color: rgb(182, 179, 184);
+  font-size: 10rem;
+  color: #0d0d0d;
+  font: Times New Roman;
+  font-style: italic;
+  font-weight: bold;
+  margin: 0rem;
+  padding: 0rem;
 
 }
 
