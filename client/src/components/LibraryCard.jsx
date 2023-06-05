@@ -26,7 +26,7 @@ const LibraryCard = ({userDoc}) => {
 
     return ( 
         
-        <div className="card-container">
+        <div className="library-container">
              <div className="card" >
                     <div className="card-image"> 
                          <img src={userDoc.image_url} alt={userDoc.title}/>
@@ -37,7 +37,7 @@ const LibraryCard = ({userDoc}) => {
                     <button className="delete-button" onClick={deleteDoc} >Delete</button>
                          <br></br>
                      <div>
-                <button className="book-button" onClick = {handleClick}></button>
+                <button className="book-button" onClick = {handleClick}> click! </button>
             <div>{feature ? <Feature  textItem={userDoc}/> : null} </div>
                 </div>
             </div>

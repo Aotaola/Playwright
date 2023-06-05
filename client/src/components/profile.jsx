@@ -1,6 +1,6 @@
 import React from "react";
 //import Selection from "./selection";
-import ProfileCard from "./profilecard";
+import ProfileCard from "./profilecard.jsx";
 import Library from "./Library";
 import { useEffect, useState } from "react";
 
@@ -23,7 +23,7 @@ useEffect((id) => {
      
 return ( 
      <div>
-     <br></br>
+     
      <div >
      {user ?(
           <ProfileCard key = {user.id} user={user}/>
@@ -31,7 +31,6 @@ return (
           null
           )}
      </div>
-     <br></br>
      <Library  key={userDocuments?.id} userDocuments={userDocuments}/>
      </div>
      );

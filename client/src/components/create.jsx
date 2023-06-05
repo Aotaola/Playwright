@@ -40,7 +40,8 @@ const Create = () => {
     }}
        
 return (
-        <div className="card-container">
+        <div className="create-container">
+            <h1> Lets begin </h1>
             <textarea type = "text" placeholder = "Type away..." value = {text} onChange = {(e) => setText(e.target.value)} ></textarea>
             <br/>
             <input type = "text" placeholder = "Title *" value = {title} onChange = {(e) => setTitle(e.target.value)}></input>

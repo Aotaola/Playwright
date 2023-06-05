@@ -44,7 +44,7 @@ const Login = ({setUser}) => {
 
 
     return ( 
-        <div className="card-container">
+        <div className="login-container">
             <h2>Login.</h2>
             <br/>            
             <div className="logincontainerall">
@@ -66,7 +66,8 @@ const Login = ({setUser}) => {
                 </form>
                 <br/>
             </div>
-            <li><a href = "/Signup">Sign Up!</a></li>
+            <br/>
+            <a href="/Signup">Sign Up!</a>
             <br></br>
         </div>
     )

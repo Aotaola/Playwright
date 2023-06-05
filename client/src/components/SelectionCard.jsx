@@ -51,7 +51,7 @@ const SelectionCard = ({textItem}) => {
                     <button className="save-button"  onClick={() => saveDoc()}>SAVE</button>
                     <br></br>
                 <div className="button-container">
-                      <button className="book-button" onClick = {handleClick}></button>
+                      <button className="book-button" onClick = {handleClick}> write ! </button>
                 </div>
                  <div> {feature ? <Feature  textItem={textItem}/> : null} 
                 </div>
