@@ -8,21 +8,21 @@ function Header({user, setUser}){
         navigate("/login")
     }
 
-    function handleHome(){
-        navigate("/")
-    }
+    // function handleHome(){
+    //     navigate("/")
+    // }
 
-    function handleAbout(){
-        navigate("/about")
-    }
+    // function handleAbout(){
+    //     navigate("/about")
+    // }
 
-    function handleprofile(){
-        navigate("/me")
-    }
+    // function handleprofile(){
+    //     navigate("/me")
+    // }
 
-    function handlecreate(){
-        navigate("/feature")
-    }
+    // function handlecreate(){
+    //     navigate("/feature")
+    // }
 
     function handleDelete(e){
         e.preventDefault()
@@ -52,13 +52,14 @@ function Header({user, setUser}){
                         {/* <button onClick={handleAbout} className="header-button">About</button> */}
                         {/* <button onClick={handleprofile} className="header-button">Profile</button> */}
                         {/* <button onClick={handlecreate} className="header-button">Create</button> */}
-                        <button onClick={handleDelete} className="header-button"> Log Out </button>
+                      <button onClick={handleDelete} className="header-button"> Log Out </button> 
                     </div>
                 ):(
-                    <button onClick={handleLogin} className="header-button"> Log in </button>
-                    )}
-                    </div>
-            
+                 <button onClick={handleLogin} className="header-button"> Log in </button>
+                    )} 
+                 </div> 
+                    {/* </div> */}
+                 
         </div>
     )
 }

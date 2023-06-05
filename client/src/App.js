@@ -66,7 +66,7 @@ function App() {
     path:"/login",
     element: 
       <div>
-        <Header user={user} setUser={setUser}/>
+        {/* <Header user={user} setUser={setUser}/> */}
         <Login setUser={setUser}/>
       </div>
   },
@@ -74,7 +74,7 @@ function App() {
     path: "/signup",
     element: 
       <div>
-        <Header user={user} setUser={setUser}/>
+        {/* <Header user={user} setUser={setUser}/> */}
         <Signup setUser={setUser}/>
       </div>
   },
@@ -110,7 +110,7 @@ function App() {
     path: "/create",
     element: 
       <div>
-        <Header user={user} setUser={setUser}/>
+        {/* <Header user={user} setUser={setUser}/> */}
         <Create setUser={setUser} text={text}/>
       </div>
   }

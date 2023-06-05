@@ -61,48 +61,48 @@ console.log(handleSignUp)
         <div>
             
             <p> not signed in yet? </p>
-            <button className="loginButton" type="submit" onClick={handleClick}>Signup
-            </button>
+            {/* <button className="loginButton" type="submit" onClick={handleClick}>Signup
+            </button> */}
             <form onSubmit={handleSignUp}>
-            <label className="loginLabel">
+            <label className="signup-Label">
                         Name:
                     <br />
-                            <input className="loginInput" type="text" value={name} onChange={(e) => setName(e.target.value)}/>
+                            <input className="signup-Input" type="text" value={name} onChange={(e) => setName(e.target.value)}/>
                     </label>
                 <br />
-                    <label className="loginLabel">
+                    <label className="signup-Label">
                         Username:
                     <br />
-                            <input className="loginInput" type="text" value={username} onChange={(e) => setUsername(e.target.value)}/>
+                            <input className="signup-Input" type="text" value={username} onChange={(e) => setUsername(e.target.value)}/>
                     </label>
                 <br />
-                    <label className="loginLabel">
+                    <label className="signup-Label">
                         Bio:
                     <br/>
-                            <input className="loginInput" type="text" value={bio} onChange={(e) => setBio(e.target.value)}/>
+                            <input className="signup-Input" type="text" value={bio} onChange={(e) => setBio(e.target.value)}/>
                     </label>
                 
                 <br />
-                    <label className="loginLabel">
+                    <label className="signup-Label">
                         Avatar:
                     <br />
-                            <input className="loginInput" type="text" value={avatar} onChange={(e) => setAvatar(e.target.value)}/>
+                            <input className="signup-Input" type="text" value={avatar} onChange={(e) => setAvatar(e.target.value)}/>
                     </label>
                 <br />
-                <label className="loginLabel">
+                <label className="signup-label">
                         Email:
                     <br />
-                            <input className="loginInput" type="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
+                            <input className="signup-Input" type="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
                     </label>
                 <br />
-                    <label className="loginLabel">
+                    <label className="signup-Label">
                         Password:
                     <br />
-                            <input className="loginInput" type="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
+                            <input className="signup-Input" type="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
                     </label>
                 <br/>
                 <br/>
-                    <button className="loginButton" type="submit">Sign Up!</button>
+                    <button className="signup-Button" type="submit">Sign Up!</button>
                 </form> 
         </div >
     )}
