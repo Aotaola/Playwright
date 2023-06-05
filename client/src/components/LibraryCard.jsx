@@ -43,7 +43,7 @@ const LibraryCard = ({userDoc}) => {
                 </div>
             </div>
          </div>
-        </div>
+     
     
      );
 }
